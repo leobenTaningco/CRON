@@ -9,7 +9,7 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
-
+    
       - name: Run logging script
         run: |
           chmod +x log_time.sh
@@ -21,4 +21,4 @@ jobs:
           git config --global user.email "github-actions@github.com"
           git add log.txt
           git commit -m "Update log file with new timestamp" || echo "No changes to commit"
-          git push
+          git push https://x-access-token:${{ secrets.PAT_TOKEN }}@github.com/leobenTaningco/CRON.git HEAD:main
