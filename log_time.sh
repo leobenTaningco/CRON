@@ -1,3 +1,6 @@
 #!/bin/bash
+
 username="${GITHUB_ACTOR}"
-echo "Current date and time: $(date) - Logged by: $username" >> log.txt
+count=$(wc -l < log.txt)
+
+echo "Current date and time: $(date) - Logged by: $username - Update count: $((count + 1))" >> log.txt
