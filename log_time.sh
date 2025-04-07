@@ -1,1 +1,2 @@
+#!/bin/bash
 echo "Current date and time: $(date)" >> log.txt
