@@ -1,2 +1,3 @@
 #!/bin/bash
-echo "Current date and time: $(date)" >> log.txt
+username="${GITHUB_ACTOR}"
+echo "Current date and time: $(date) - Logged by: $username" >> log.txt

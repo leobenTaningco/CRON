@@ -1,7 +1,7 @@
 name: Log Time Job
 on:
   schedule:
-    - cron: "*/1 * * * *"  # Runs every 30 minutes
+    - cron: "*/30 * * * *"  # Runs every 30 minutes
   workflow_dispatch:
 jobs: 
   log_time:
@@ -27,4 +27,3 @@ jobs:
           git commit -m "Update log file with new timestamp" || echo "No changes to commit"
           git pull --rebase origin main  # Fetch and rebase changes from the remote
           git push https://github-actions:${{ secrets.PAT_TOKEN }}@github.com/leobenTaningco/CRON.git
-
